@@ -1,0 +1,10 @@
+.cartOmp {
+    padding: 32px;
+    color: #fff;
+    background-color: #31b572;
+    text-align: left;
+}
+
+.listOmp {
+    list-style-type: none;
+}

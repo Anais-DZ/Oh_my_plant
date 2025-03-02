@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap');
+
+.titleBanner {
+    color: black;
+    text-align: right;
+    padding: 32px;
+    border-bottom: solid 3px rgb(60, 24, 7);
+    display: flex;
+	justify-content: flex-end;
+	flex-direction: row;
+	align-items: center;
+}
+
+.titleOmp {
+	font-family: 'rubik dirt';
+	color: rgb(60, 24, 7);
+}
+
+.logoOmp {
+	height: 100px;
+	width: 100px;
+}
