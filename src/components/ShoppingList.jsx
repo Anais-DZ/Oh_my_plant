@@ -1,19 +1,35 @@
-const plantList =[
-    'monstera deliciosa',
-    'ficus lyrata',
-    'pothos argenté',
-    'monstera monkey leaf',
-    'yucca'
-]
+import { plantList } from "../datas/plantList"
 
-//pour la key des éléments du tableau, comme il n'y a pas d'id associée à ces derniers, on utilise une combinaison entre l'index du tableau et le nom de la plant qui est une string
+
+
+/**
+ * plantList est un tableau d'objets qui contient des plantes, chaque plante ayant une propriété category
+ * acc est l'accumulateur, qui commence comme un tableau vide [] (valeur initiale)
+ * plant représente chaque élément (objet plante) du tableau
+ * reduce() est utilisé pour parcourir ce tableau et en extraire une liste unique des catégories
+ * acc.includes(plant.category) vérifie si la catégorie de la plante est déjà présente dans acc :
+ *     - Si oui, on ne l’ajoute pas (on retourne acc inchangé)
+ *     - Sinon, on ajoute cette catégorie en utilisant concat(), qui crée un nouveau tableau    
+ * @returns une liste
+ */
 function ShoppingList() {
+    const categories = plantList.reduce(
+        (acc, plant) => acc.includes(plant.category) ? acc : acc.concat(plant.category),
+        []
+    )
     return (
-        <ul>
-            {plantList.map((plant, index)=>(
-                <li key={`${plant}-${index}`}> {plant} </li>
-            ))}
-        </ul>
+        <div>
+            <ul>
+				{categories.map((cat) => (
+					<li key={cat}>{cat}</li>
+				))}
+			</ul>
+			<ul>
+				{plantList.map((plant) => (
+					<li key={plant.id} > {plant.name} {plant.isBestSale && <span>(Meilleure vente ! 👍)</span>}</li>
+				))}
+			</ul>
+		</div>
     )
 }
 

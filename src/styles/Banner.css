@@ -2,13 +2,26 @@
 
 .titleBanner {
     color: black;
-    text-align: right;
-    padding: 32px;
     border-bottom: solid 3px rgb(60, 24, 7);
+	padding: 35px 35px 20px 35px;
+	font-family: 'sans serif';
+	font-style: oblique;
+	font-size: 20px;
+	text-align: right;
+}
+
+.rowBanner {
+	text-align: right;
     display: flex;
 	justify-content: flex-end;
 	flex-direction: row;
 	align-items: center;
+
+	 h1 {
+		margin: 0;
+		font-size: 62px;
+		font-weight: 500;
+	 }
 }
 
 .titleOmp {
