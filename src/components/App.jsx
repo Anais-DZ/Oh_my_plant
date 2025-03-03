@@ -15,8 +15,9 @@ function App() {
                 <img src={logo} alt="logo en forme de feuille" className='logoOmp'/>
                 <h1 className='titleOmp'>Oh my plant !</h1> 
             </div>
-          </Banner>
             <Recommandation />
+          </Banner>
+            
           <Cart />
           <ShoppingList />
     </div>
